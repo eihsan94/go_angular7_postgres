@@ -1,0 +1,54 @@
+<mat-checkbox class="example-margin" [(ngModel)]="virtual">virtual scroll toggle</mat-checkbox>
+<mat-grid-list [cols]="2" rowHeight="1:1">
+  <mat-grid-tile class="tile1">
+      <!-- <cdk-virtual-scroll-viewport class="list-container lg" class="gkz-viewport" itemSize="600" minBufferPx="600"
+        maxBufferPx="800"> -->
+      <cdk-virtual-scroll-viewport class="list-container lg" class="gkz-viewport" itemSize="600" *ngIf="virtual">
+        <div *cdkVirtualFor="let image of observableImages | async;">
+          <mat-card class="example-card">
+            <mat-card-header>
+              <div mat-card-avatar class="example-header-image"></div>
+              <mat-card-title></mat-card-title>
+              <mat-card-subtitle>WoW</mat-card-subtitle>
+            </mat-card-header>
+            <img mat-card-image [src]="image.src" alt="Random photo">
+            <mat-card-content>
+              <p>
+                This is a random image selected from LoremPicsum.
+              </p>
+            </mat-card-content>
+            <mat-card-actions>
+              <button mat-button>LIKE</button>
+              <button mat-button>SHARE</button>
+            </mat-card-actions>
+          </mat-card>
+        </div>
+      </cdk-virtual-scroll-viewport>
+      <div class="main-container2"  *ngIf="!virtual">
+          <div *ngFor="let image of observableImages | async;">
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title></mat-card-title>
+                <mat-card-subtitle>WoW</mat-card-subtitle>
+              </mat-card-header>
+              <img mat-card-image [src]="image.src" alt="Random photo">
+              <mat-card-content>
+                <p>
+                  This is a random image selected from LoremPicsum.
+                </p>
+              </mat-card-content>
+              <mat-card-actions>
+                <button mat-button>LIKE</button>
+                <button mat-button>SHARE</button>
+              </mat-card-actions>
+            </mat-card>
+          </div>
+        </div>
+  </mat-grid-tile>
+  <mat-grid-tile>
+    <h1 *ngIf="virtual">Virtual Scroll</h1>
+    <h1 *ngIf="!virtual">normal Scroll</h1>
+  </mat-grid-tile>
+</mat-grid-list>
+

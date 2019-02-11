@@ -1,0 +1,26 @@
+<app-loading-spinner *ngIf="showSpinner"></app-loading-spinner>
+
+<div class="margin-top-1em" *ngIf="!showSpinner">
+  <cdk-virtual-scroll-viewport class="gkz-viewport" itemSize="600">
+    <div *cdkVirtualFor="let datum of testUserData | async;" class="item">
+      <mat-card class="example-card">
+        <mat-card-header>
+          <div mat-card-avatar class="example-header-image"></div>
+          <mat-card-title>username: {{ datum.username }}</mat-card-title>
+          <mat-card-subtitle>password: {{ datum.password }}</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image src="https://picsum.photos/500/500/?random" alt="random image">
+        <mat-card-content>
+          <p>
+            This is a random image selected from LoremPicsum.
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button>LIKE</button>
+          <button mat-button>SHARE</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  </cdk-virtual-scroll-viewport>
+
+</div>

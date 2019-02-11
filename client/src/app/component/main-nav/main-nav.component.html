@@ -1,0 +1,95 @@
+<!-- <mat-sidenav-container class="sidenav-container">
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+       
+    </mat-toolbar>
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container> -->
+
+
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" [ngClass]="{hidden: !isHandset$ | async}" fixedInViewport="false" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+    [mode]="'over'">
+    <mat-toolbar color="primary">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>Menu
+      <button type="button" aria-labael="Toggle sidenav" mat-icon-button (click)="drawer.toggle()">
+        <mat-icon aria-label="Side nav toggle icon">keyboard_arrow_left</mat-icon>
+      </button>
+    </mat-toolbar>
+    <mat-nav-list>
+      <div class="margin-top-10px">
+        <button mat-flat-button (click)="navigate('/'); drawer.toggle()">
+          <mat-icon class="margin-bottom-5px" svgIcon="home_icon"></mat-icon>
+          Home
+        </button>
+      </div>
+      <div class="margin-top-10px">
+        <button mat-flat-button class="margin-left-5px" (click)="navigate('/checkbox'); drawer.toggle()">
+          <mat-icon aria-label="Example icon-button with an assignment_turned_in icon">assignment_turned_in</mat-icon>
+          checkbox
+        </button>
+      </div>
+      <div class="margin-top-10px">
+        <button mat-flat-button class="margin-left-5px" (click)="navigate('/days'); drawer.toggle()">
+          <mat-icon aria-label="Example icon-button with a today icon">today</mat-icon>
+          calendar
+        </button>
+      </div>
+      <div class="margin-top-10px">
+        <button mat-flat-button class="margin-left-5px" (click)="navigate('/table'); drawer.toggle()">
+          <mat-icon aria-label="Example icon-button with a table_chart icon">table_chart</mat-icon>
+          table
+        </button>
+      </div>
+      <div class="margin-top-10px">
+        <button mat-flat-button class="margin-left-5px" (click)="navigate('/virtual-scroll'); drawer.toggle()">
+          <mat-icon class="margin-bottom-5px" svgIcon="scroll_icon"></mat-icon>
+          virtual scroll
+        </button>
+      </div>
+      <div class="margin-top-10px">
+        <button mat-flat-button class="margin-left-5px" (click)="navigate('/card'); drawer.toggle()">
+          <mat-icon aria-label="Example icon-button with a dashboard icon">dashboard</mat-icon>
+          card
+        </button>
+      </div>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async; else notMobile">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <ng-template #notMobile>
+        <button mat-flat-button color="primary" (click)="navigate('/')">
+          <mat-icon class="margin-bottom-5px" svgIcon="home_icon"></mat-icon>
+          Home
+        </button>
+        <button mat-flat-button color="primary" class="margin-left-5px" (click)="navigate('/checkbox')">
+          <mat-icon aria-label="Example icon-button with an assignment_turned_in icon">assignment_turned_in</mat-icon>
+          checkbox
+        </button>
+        <button mat-flat-button color="primary" class="margin-left-5px" (click)="navigate('/days')">
+          <mat-icon aria-label="Example icon-button with a today icon">today</mat-icon>
+          calendar
+        </button>
+        <button mat-flat-button color="primary" class="margin-left-5px" (click)="navigate('/table')">
+          <mat-icon aria-label="Example icon-button with a table_chart icon">table_chart</mat-icon>
+          table
+        </button>
+        <button mat-flat-button color="primary" class="margin-left-5px" (click)="navigate('/virtual-scroll')">
+          <mat-icon class="margin-bottom-5px" svgIcon="scroll_icon"></mat-icon>
+          virtual scroll
+        </button>
+        <button mat-flat-button color="primary" class="margin-left-5px" (click)="navigate('/card')">
+          <mat-icon aria-label="Example icon-button with a dashboard icon">dashboard</mat-icon>
+          card
+        </button>
+      </ng-template>
+    </mat-toolbar>
+    <ng-content></ng-content>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>

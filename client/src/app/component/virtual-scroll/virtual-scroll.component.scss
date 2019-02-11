@@ -1,0 +1,28 @@
+
+  
+  .example-header-image {
+    background-image: url('https://picsum.photos/600/600/?random');
+    background-size: cover;
+  }
+  .gkz-viewport {
+    height: 84vh;
+    width: 100vw;
+    // border: 1px solid black;
+    // .item {
+    //   height: 10em;
+    // }
+  }
+  .example-card {
+    max-width: 400px;
+    max-height: 560px;
+    margin: 0 auto;
+    margin-bottom: 1em;
+  }
+ .tile1 {
+  height: 22vh;
+ }
+ .main-container2 {
+  height: calc(100% - 70px);
+  width: calc(100% - 70px);
+  overflow: auto;
+ }

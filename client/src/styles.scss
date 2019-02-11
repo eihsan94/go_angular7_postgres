@@ -1,0 +1,134 @@
+// /* You can add global styles to this file, and also import other style files */
+
+// App theme
+// @import "~@angular/material/prebuilt-themes/pink-bluegrey.css";
+
+// @import "~@angular/material/prebuilt-themes/indigo-pink.css";
+// @import "~@angular/material/prebuilt-themes/purple-green.css";
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+}
+/////////////////////////
+// margin class
+// top
+.margin-top-5px {
+    margin-top: 5px;
+}
+.margin-top-10px {
+    margin-top: 10px;
+}
+.margin-top-12px {
+    margin-top: 12px;
+}
+.margin-top-1em {
+    margin-top: 1em;
+}
+.margin-top-2em {
+    margin-top: 2em;
+}
+// bottom
+.margin-bottom-5px {
+    margin-bottom: 5px;
+}
+.margin-bottom-10px {
+    margin-bottom: 10px;
+}
+.margin-bottom-1em {
+    margin-bottom: 1em;
+}
+.margin-bottom-2em {
+    margin-bottom: 2em;
+}
+// left
+.margin-left-5px {
+    margin-left: 5px;
+}
+.margin-left-10px {
+    margin-left: 10px;
+}
+.margin-left-1em {
+    margin-left: 1em;
+}
+.margin-left-2em {
+    margin-left: 2em;
+}
+// right
+.margin-right-5px {
+    margin-right: 5px;
+}
+.margin-right-10px {
+    margin-right: 10px;
+}
+.margin-right-1em {
+    margin-right: 1em;
+}
+.margin-right-2em {
+    margin-right: 2em;
+}
+/////////////////////////
+// padding class
+// top
+.padding-top-5px {
+    padding-top: 5px;
+}
+.padding-top-10px {
+    padding-top: 10px;
+}
+.padding-top-1em {
+    padding-top: 1em;
+}
+.padding-top-2em {
+    padding-top: 2em;
+}
+// bottom
+.padding-bottom-5px {
+    padding-bottom: 5px;
+}
+.padding-bottom-10px {
+    padding-bottom: 10px;
+}
+.padding-bottom-1em {
+    padding-bottom: 1em;
+}
+.padding-bottom-2em {
+    padding-bottom: 2em;
+}
+// left
+.padding-left-5px {
+    padding-left: 5px;
+}
+.padding-left-10px {
+    padding-left: 10px;
+}
+.padding-left-1em {
+    padding-left: 1em;
+}
+.padding-left-2em {
+    padding-left: 2em;
+}
+// right
+.padding-right-5px {
+    padding-right: 5px;
+}
+.padding-right-10px {
+    padding-right: 10px;
+}
+.padding-right-1em {
+    padding-right: 1em;
+}
+.padding-right-2em {
+    padding-right: 2em;
+}
+/////////////////////////////
+// position
+.center {
+    margin: 0 auto;   
+    top: 30vh;
+}
