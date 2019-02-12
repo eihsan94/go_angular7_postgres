@@ -37,7 +37,7 @@ services:
     volumes:
       - ./client:/myapp
     working_dir: /myapp
-    command: [sh, -c, npm install && npm start]  // if node module is not installed in the client use this 
-    # command: [sh, -c,  npm start] // if node_module installed use this
+    command: [sh, -c, npm install && npm start]  # if node module is not installed in the client use this 
+    # command: [sh, -c,  npm start] # if node_module installed use this
     environment:
       - NODE_ENV=development
